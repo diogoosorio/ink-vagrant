@@ -1,0 +1,13 @@
+name    'diogoosorio-ink'
+version '0.0.1'
+source ''
+author 'Diogo Osório'
+license 'GPL3'
+summary 'Sapo Ink'
+description 'A module that creates a development environment for Sapo\'s Ink/Ink.js projects.'
+project_page ''
+
+## Add dependencies, if any:
+# dependency 'username/name', '>= 1.2.0'
+dependency 'nesi/git', '>= 0.0.1'
+dependency 'puppetlabs/nodejs', '>= 0.2.1'

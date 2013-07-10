@@ -72,37 +72,4 @@ class ink (
     require => Package['apache2'],
     notify => Service['apache2']
   }
-
-
-  apt::pin {'lts-quantal':
-    priority => 100
-  }
-
-  class {'nodejs':
-    require => Apt::Pin['lts-quantal']
-  }
-
-  package {'yuidocjs':
-    ensure => latest,
-    provider => 'npm',
-    require => Class['nodejs'],
-  }
-
-  package {'plato':
-    ensure => latest,
-    provider => 'npm',
-    require => Class['nodejs'],
-  }
-
-  package {'uglify-js':
-    ensure => latest,
-    provider => 'npm',
-    require => Class['nodejs'],
-  }
-
-  package {'async':
-    ensure => latest,
-    provider => 'npm',
-    require => Class['nodejs'],
-  }
 }
